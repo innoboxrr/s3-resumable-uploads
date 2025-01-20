@@ -7,7 +7,6 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
-
     public function map()
     {
         $this->mapRoutes();      
@@ -15,14 +14,10 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapRoutes()
     {
-
         Route::middleware('api')
             ->prefix('s3resumableuploads')
             ->as('s3resumableuploads.')
-            ->middleware('web')
             ->namespace('Innoboxrr\S3ResumableUploads\Http\Controllers')
             ->group(__DIR__ . '/../../routes/web.php');
-
     }
-
 }

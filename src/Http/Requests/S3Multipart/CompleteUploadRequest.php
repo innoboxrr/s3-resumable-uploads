@@ -15,6 +15,7 @@ class CompleteUploadRequest extends CustomFormRequest
     public function rules()
     {
         return [
+            'filename' => 'required|string',
             'file_identifier' => 'required|string',
             'upload_id' => 'required|string',
             'parts' => 'required|array',
@@ -38,9 +39,7 @@ class CompleteUploadRequest extends CustomFormRequest
             ],
         ]);
 
-        $video = Video::where('code', $this->file_identifier)->firstOrFail();
 
-        event(new VideoUploadSuccessful($video->id));
 
         return ['message' => 'Upload completed'];
     }

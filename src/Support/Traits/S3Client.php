@@ -1,6 +1,6 @@
 <?php
 
-namespace Innoboxrr\VideoProcessor\Support\Traits;
+namespace Innoboxrr\S3ResumableUploads\Support\Traits;
 
 use Aws\S3\S3Client as AwsS3Client;
 
