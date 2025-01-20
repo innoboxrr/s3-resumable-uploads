@@ -9,9 +9,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function register()
     {
-        
-        // $this->mergeConfigFrom(__DIR__ . '/../../config/s3resumableuploads.php', 's3resumableuploads');
-
+        $this->mergeConfigFrom(__DIR__ . '/../../config/s3resumableuploads.php', 's3resumableuploads');
     }
 
     public function boot()
