@@ -2,7 +2,7 @@
 
 namespace Innoboxrr\S3ResumableUploads\Http\Requests\S3Multipart;
 
-use App\Models\Video;
+use Illuminate\Support\Facades\Storage;
 use Innoboxrr\S3ResumableUploads\Events\VideoUploadSuccessful;
 
 class CompleteUploadRequest extends CustomFormRequest
@@ -41,6 +41,9 @@ class CompleteUploadRequest extends CustomFormRequest
 
 
 
-        return ['message' => 'Upload completed'];
+        return [
+            'message' => 'Upload completed',
+            'url' => Storage::disk('s3')->url($this->getKey($this->file_identifier))
+        ];
     }
 }
