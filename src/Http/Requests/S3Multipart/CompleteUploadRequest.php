@@ -3,7 +3,6 @@
 namespace Innoboxrr\S3ResumableUploads\Http\Requests\S3Multipart;
 
 use Illuminate\Support\Facades\Storage;
-use Innoboxrr\S3ResumableUploads\Events\VideoUploadSuccessful;
 
 class CompleteUploadRequest extends CustomFormRequest
 {
