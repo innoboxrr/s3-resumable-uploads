@@ -1,0 +1,19 @@
+{
+    "name": "innoboxrr/s3-resumable-uploads",
+    "description": "Resumable Uploads for Laravel & AWS S3",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Innoboxrr\\S3ResumableUploads\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Homero Raul",
+            "email": "h.raulvc@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
