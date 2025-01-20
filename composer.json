@@ -15,5 +15,21 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^9",
+        "innoboxrr/larapack-generator": "^5.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Innoboxrr\\S3ResumableUploads\\Providers\\AppServiceProvider",
+                "Innoboxrr\\S3ResumableUploads\\Providers\\AuthServiceProvider",
+                "Innoboxrr\\S3ResumableUploads\\Providers\\EventServiceProvider",
+                "Innoboxrr\\S3ResumableUploads\\Providers\\RouteServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "aws/aws-sdk-php": "^3.337"
+    }
 }
