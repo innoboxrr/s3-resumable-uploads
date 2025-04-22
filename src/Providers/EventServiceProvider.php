@@ -15,7 +15,7 @@ class EventServiceProvider extends ServiceProvider
 
     private function registerEventsAndObservers()
     {
-        $cacheKey = 'events_and_observers';
+        $cacheKey = 's3_ru_events_and_observers';
 
         $data = Cache::remember($cacheKey, now()->addDay(), function () {
             return [
