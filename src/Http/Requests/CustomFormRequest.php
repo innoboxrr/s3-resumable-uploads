@@ -14,7 +14,7 @@ class CustomFormRequest extends FormRequest
 
     protected $bucket;
 
-    protected $key; // Clave de la ubicación de subida del video
+    protected $key; // Clave de la ubicación de subida del file
 
     protected $filename; // Nombre del archivo
 
@@ -26,16 +26,11 @@ class CustomFormRequest extends FormRequest
 
     /**
      * @var key hace referencia a la ubicación y nombre del archivo como se almacenará en AWS
-     * Esto debe estár vinculado con getS3OriginalPathAttribute en VideoMutators
      **/
-    protected function getKey($videoIdentifier)
+    protected function getKey($fileIdentifier)
     {
-        // PENDIENTE:
-        // Por ahora esto está condicionado a que los vidos en formato MP4
-        // Más adelante debemos ver de que manera podemos manejar más formatos
-        $videoPath = config('s3resumableuploads.file_path', 'uploads');
-
-        return "$videoPath/$videoIdentifier/{$this->filename}";
+        $filePath = config('s3resumableuploads.file_path', 'uploads');
+        return "$filePath/$fileIdentifier/{$this->filename}";
     }
 
     protected function prepareForValidation()
