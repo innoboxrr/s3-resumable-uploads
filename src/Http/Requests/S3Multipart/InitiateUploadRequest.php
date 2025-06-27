@@ -2,6 +2,8 @@
 
 namespace Innoboxrr\S3ResumableUploads\Http\Requests\S3Multipart;
 
+use Innoboxrr\S3ResumableUploads\Http\Requests\CustomFormRequest;
+
 class InitiateUploadRequest extends CustomFormRequest
 {
     public function authorize()
