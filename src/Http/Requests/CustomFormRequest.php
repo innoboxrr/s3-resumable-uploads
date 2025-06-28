@@ -1,7 +1,6 @@
 <?php
 
-namespace Innoboxrr\S3ResumableUploads\Http\Requests\S3Multipart;
-
+namespace Innoboxrr\S3ResumableUploads\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Innoboxrr\S3ResumableUploads\Support\Traits\S3Client;
 

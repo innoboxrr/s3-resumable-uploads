@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
             
             // $this->publishes([__DIR__.'/../../resources/views' => resource_path('views/vendor/s3resumableuploads'),], 'views');
 
-            // $this->publishes([__DIR__.'/../../config/s3resumableuploads.php' => config_path('s3resumableuploads.php')], 'config');
+            $this->publishes([__DIR__.'/../../config/s3resumableuploads.php' => config_path('s3resumableuploads.php')], 'config');
 
         }
 
