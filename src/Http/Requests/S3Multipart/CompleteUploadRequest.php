@@ -43,6 +43,11 @@ class CompleteUploadRequest extends CustomFormRequest
 
         return [
             'message' => 'Upload completed',
+            'path' => $this->getKey($this->file_identifier),
+            'temporary_url' => Storage::disk('s3')->temporaryUrl(
+                $this->getKey($this->file_identifier),
+                now()->addMinutes(5)
+            ),
             'url' => Storage::disk('s3')->url($this->getKey($this->file_identifier))
         ];
     }
